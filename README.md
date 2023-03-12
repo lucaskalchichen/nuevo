@@ -1,2 +1,2 @@
 # nuevo
-otro intendo de hacer bien la entrega
+otro intento de hacer bien la entrega
