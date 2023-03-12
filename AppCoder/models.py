@@ -5,7 +5,7 @@ from django.db import models
 class Usuario(models.Model):
     nombre = models.CharField(max_length=30)
     apellido = models.CharField(max_length=30)
-    dni =models.IntegerField()
+    dni = models.IntegerField()
     user = models.CharField(max_length=16)
 
 

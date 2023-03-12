@@ -16,14 +16,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from AppCoder.views import index,usuarios,busqueda,registro,Buscar
+from AppCoder.views import index,User,busqueda,Buscar,Vehiculo
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index, name='index'),
-    path('user', usuarios, name='user'),
-    path('register', registro, name='regist'),
+    path('user', User, name='user'),
+    path('register', Vehiculo, name='regist'),
     path('busqueda', busqueda, name='serch'),
     path('buscar/', Buscar)
 ]

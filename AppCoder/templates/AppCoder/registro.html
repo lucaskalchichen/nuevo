@@ -7,17 +7,20 @@
        
   <h1 class="text-center">Registro Vehicular</h1>
   <main class="wp-block-group">
-    <div class="wp-block-jetpack-contact-form" style="padding-top:16px;padding-right:16px;padding-bottom:16px;padding-left:16px;">
-      <form>
-        <label for="user">Nombre *</label>
-        <input type="text" name="user" id="user" required>
-        <label for="nchasis">Numero de Chasis *</label>
-        <input type="text" name="nchasis" id="nchasis" required>
-        <label for="npatente">Numero de Patente</label>
-        <input type="text" name="npatente" id="npatente">
-        <label for="ano">Ano de Registro *</label>
-        <input type="number" name="ano" id="ano" required>
-        <button type="submit">Enviar</button>
+
+  {% if form.errors %}
+  
+    <p style="color: red;"> Están mal los datos, revisar</p>
+
+  {% endif %}
+
+  <div class="wp-block-jetpack-contact-form" style="padding-top:16px;padding-right:16px;padding-bottom:16px;padding-left:16px;">
+      <form action="" method="POST">{% csrf_token %}
+        
+          {{ form.as_p }}
+
+        <input type="submit", value="Enviar">
+
       </form>
     </div>
   </main>

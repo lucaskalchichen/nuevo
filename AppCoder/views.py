@@ -2,7 +2,10 @@ from django.shortcuts import render
 
 from django.http import HttpResponse
 
-from AppCoder.models import Automotor
+from AppCoder.models import Automotor,Usuario
+
+from AppCoder.forms import FormAutomotor,FormUsuario
+
 # Create your views here.
 
 #hipervinculos index
@@ -34,5 +37,62 @@ def Buscar(request):
         respueta = " No se encontro la patente "
 
         return HttpResponse(respueta)
+    
 
+# registro de vehiculo
+
+def Vehiculo(request):
+
+    if request.method == 'POST':
+        
+        form = FormAutomotor(request.POST)
+
+        print(form)
+
+        if form.is_valid:
+
+            info = form.cleaned_data
+
+            vehiculo = Automotor(user=info['user'] ,nchasis=info['nchasis'], nmotor=info['nmotor'] , npatente=info['npatente'] , ano=info['ano'])
+
+            vehiculo.save()
+
+            return render(request, "AppCoder/index.html")
+    
+    else:
+
+        context ={
+            "form": FormAutomotor(),
+        }
+    
+        return render(request, "AppCoder/registro.html", context)
+
+
+#registro de usuario
+
+def User(request):
+
+    if request.method == 'POST':
+        
+        form = FormUsuario(request.POST)
+
+        print(form)
+
+        if form.is_valid:
+
+            info = form.cleaned_data
+
+            usuario = Usuario(user=info['user'] ,nombre=info['nombre'], apellido=info['apellido'] , dni=info['dni'])
+
+            usuario.save()
+
+            return render(request, "AppCoder/index.html")
+    
+    else:
+
+        context ={
+            "form": FormUsuario(),
+        }
+    
+        return render(request, "AppCoder/registro.html", context)
 

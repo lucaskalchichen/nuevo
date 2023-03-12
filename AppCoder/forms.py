@@ -1,15 +1,14 @@
 from django import forms
+from AppCoder.models import Usuario,Automotor
 
-class FormUsuario(forms.Form):
-    nombre =forms.CharField(max_length=30)
-    apellido =forms.CharField(max_length=30)
-    dni = forms.IntegerField()
-    user =forms.CharField(max_length=16)
+class FormUsuario(forms.ModelForm):
+    class Meta:
+        model = Usuario
+        fields = '__all__'
 
 
-class FormAutomotor(forms.Form):
-    user =forms.CharField(max_length=16)
-    nchasis =forms.CharField(max_length=10)
-    nmotor =forms.CharField(max_length=10)
-    npatente =forms.CharField(max_length=7)
-    ano =forms.IntegerField()
+class FormAutomotor(forms.ModelForm):
+    class Meta:
+        model = Automotor
+        fields = '__all__'
+
