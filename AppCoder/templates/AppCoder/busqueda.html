@@ -4,10 +4,14 @@
 
 {% block main%}
 <div class="col-md-8 offset-md-2 info">
-       
- 
-  <h1 class="text-center">SPITAL</h1>
-  <p class="text-center">
+  <form action="/serch/" method="GET" class="text-center">
+    <h1 for="patente">Patente</h1>
+    <br>
+    <input type="text" name="patente" id="patente" placeholder="ej: AB 932 AA">
+    <br>
+    <input type="submit" value="Buscar">
+
+  </form>
       Busqueda
   </p>
 </div>

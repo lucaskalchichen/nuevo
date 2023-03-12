@@ -1,0 +1,18 @@
+{% extends "AppCoder/base.html" %}
+{% load static %}
+
+
+{% block main%}
+<div class="col-md-8 offset-md-2 info">
+  <p class="text-center">
+      La patente {{npatente}}
+      pertenece a {{Automotor.user}}
+  </p>
+    <ul>
+        <li>numero de Chasis :{{Automotor.nchasis}} </li>
+        <li>numero de motor : {{Automotor.nmotor}} </li>
+        <li>Ano de registro : {{Automotor.ano}} </li>
+    </ul>
+</div>
+
+{% endblock %}

@@ -58,3 +58,61 @@ body{
 .banner .info a:hover{
 	background: #e91e63;
 }
+
+
+/* form*/
+
+/* Estilos generales */
+.wp-block-group {
+	margin: 20px auto;
+	max-width: 600px;
+  }
+  
+  .wp-block-jetpack-contact-form {
+	background-color: #f2f2f2;
+	border-radius: 10px;
+	padding: 30px;
+  }
+  
+  /* Estilos de los campos de entrada */
+  label {
+	display: block;
+	font-weight: bold;
+	margin-top: 10px;
+  }
+  
+  input[type="text"],
+  input[type="tel"] {
+	border: none;
+	border-radius: 5px;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.1) inset;
+	font-size: 16px;
+	padding: 10px;
+	width: 100%;
+  }
+  
+  input[type="text"]:focus,
+  input[type="tel"]:focus {
+	outline: none;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.2) inset;
+  }
+  
+  input[type="submit"] {
+	background-color: #3d9cd2;
+	border: none;
+	border-radius: 5px;
+	color: #fff;
+	cursor: pointer;
+	font-size: 16px;
+	margin-top: 20px;
+	padding: 10px;
+	transition: all 0.3s;
+	width: 100%;
+  }
+  
+  input[type="submit"]:hover {
+	background-color: #2b7aa4;
+  }
+  
+
+

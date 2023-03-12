@@ -5,11 +5,24 @@
 {% block main%}
 <div class="col-md-8 offset-md-2 info">
        
- 
-  <h1 class="text-center">SPITAL</h1>
-  <p class="text-center">
-      Registro
-  </p>
+  <h1 class="text-center">Registro Vehicular</h1>
+  <main class="wp-block-group">
+    <div class="wp-block-jetpack-contact-form" style="padding-top:16px;padding-right:16px;padding-bottom:16px;padding-left:16px;">
+      <Form>
+        <label for="user">Nombre *</label>
+        <input type="text" name="user" id="user" required>
+        <label for="nchasis">Numero de Chasis *</label>
+        <input type="text" name="nchasis" id="nchasis" required>
+        <label for="npatente">Numero de Patente</label>
+        <input type="text" name="npatente" id="npatente">
+        <label for="ano">Ano de Registro *</label>
+        <input type="number" name="ano" id="ano" required>
+        <button type="submit">Enviar</button>
+      </Form>
+    </div>
+  </main>
+  
+
 </div>
 
 {% endblock %}
