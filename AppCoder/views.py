@@ -24,17 +24,15 @@ def Buscar(request):
     
     if request.GET['patente']:
         
-    
-        respueta = f"estoy buscando la patente numero:{ request.GET['patente'] }"
 
-        """npatente = request.GET["patente"]
-        automotor = Automotor.objects.filter(npatente_itcontains = npatente)
+        patente = request.GET['patente'] 
+        automotor = Automotor.objects.filter(npatente = patente)
 
-        return HttpResponse(respueta)"""
+        return render(request, "AppCoder/Busqueda.html", {"vehiculo":automotor,"patente":patente})
 
     else:
         respueta = " No se encontro la patente "
 
-    return HttpResponse(respueta)
+        return HttpResponse(respueta)
 
 

@@ -4,15 +4,28 @@
 
 {% block main%}
 <div class="col-md-8 offset-md-2 info">
-  <form action="Buscar/" method="GET" class="text-center">
-    <h1 for="patente">Patente</h1>
+  <form action="buscar/" method="GET" class="text-center">
+    <h1  for="patente">Patente</h1>
     <br>
     <input type="text" name="patente" id="patente" placeholder="ej: AB 932 AA">
     <br>
     <input type="submit" value="Buscar">
 
   </form>
-      Busqueda
+    
+  {% if patente %}
+
+    <p>Estamos buscando el vehiculo : {{patente}}</p>
+
+    <ul>
+      <li>Numero de Chasis:  {{vehiculo.nchasis}}</li>
+      <li>Numero de Motor:  {{vehiculo.nmotor}}</li>
+      <li>Ano de Registro:  {{vehiculo.ano}}</li>
+      <li>Usuario:  {{vehiculo.user}}</li>
+    </ul>
+
+  {% endif %}
+
   </p>
 </div>
 

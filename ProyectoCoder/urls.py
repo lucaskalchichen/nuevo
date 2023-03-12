@@ -25,5 +25,5 @@ urlpatterns = [
     path('user', usuarios, name='user'),
     path('register', registro, name='regist'),
     path('busqueda', busqueda, name='serch'),
-    path('Buscar/', Buscar)
+    path('buscar/', Buscar)
 ]
