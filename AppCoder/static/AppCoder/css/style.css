@@ -1,3 +1,6 @@
+/*
+
+
 body{
 	margin:0;
 	padding:0;
@@ -11,9 +14,10 @@ body{
 	background:url('overlay.png'),url('banner.jpg');
 	background-position: top;
 	background-size:cover;
-	/*background-attachment: fixed;*/
+	
 	background-repeat: no-repeat;
 }
+
 .banner .navbar{
 	margin-top:4%;
 }
@@ -60,9 +64,11 @@ body{
 }
 
 
+*/
+
 /* form*/
 
-/* Estilos generales */
+/* Estilos generales 
 .wp-block-group {
 	margin: 20px auto;
 	max-width: 600px;
@@ -74,7 +80,7 @@ body{
 	padding: 30px;
   }
   
-  /* Estilos de los campos de entrada */
+   Estilos de los campos de entrada pythoncla
   label {
 	display: block;
 	font-weight: bold;
@@ -114,5 +120,5 @@ body{
 	background-color: #2b7aa4;
   }
   
-
+*/
 

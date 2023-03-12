@@ -23,6 +23,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index, name='index'),
     path('user', usuarios, name='user'),
-    path('serch', busqueda, name='serch'),
     path('register', registro, name='regist'),
+    path('busqueda', busqueda, name='serch'),
+    path('Buscar/', Buscar)
 ]
